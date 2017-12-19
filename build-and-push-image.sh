@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build --no-cache -t bsell/yarn-npm8-dotnet105-cypress-bower .
-docker push bsell/yarn-npm8-dotnet105-cypress-bower
+docker build --no-cache -t bsell/yarn-npm-dotnet-cypress-bower:8-1.0.5 .
+docker push bsell/yarn-npm-dotnet-cypress-bower:8-1.0.5
