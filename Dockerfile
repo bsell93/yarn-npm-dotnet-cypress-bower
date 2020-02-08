@@ -1,7 +1,10 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1.505
 
-# Install sonarscanner for c#
+# Install sonarscanner (requires java) for c#
 RUN dotnet tool install --global dotnet-sonarscanner
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y default-jdk
 ENV PATH="/root/.dotnet/tools:${PATH}"
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
